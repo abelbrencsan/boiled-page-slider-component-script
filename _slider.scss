@@ -1,0 +1,97 @@
+// Slider component variables
+$slider-dot-transition: 200ms ease;
+$slider-generate-scheme: true;
+$slider-rewind-transition: 800ms ease-in-out;
+$slider-transition: 300ms ease-in-out;
+
+/* Slider component prototype */
+div.slider {
+	margin-bottom: $element-margin;
+	position: relative;
+
+	> div.slider-viewport {
+		overflow: hidden;
+
+		> ul.slider-list {
+			flex-wrap: nowrap;
+			margin-bottom: $element-margin;
+			position: relative;
+
+			> li.slider-list-item {
+				flex-shrink: 0;
+
+				> :last-child,
+				> :last-child > :last-child,
+				> :last-child > :last-child > :last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	> ul.slider-actions {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		margin-left: ($box-padding * -0.5);
+		padding-left: 0;
+
+		> li {
+			padding-left: ($box-padding * 0.5);
+		}
+	}
+
+	&.is-sliding > div.slider-viewport > ul.slider-list {
+		transition: transform $slider-transition;
+	}
+
+	&:not(.is-sliding) > div.slider-viewport > ul.slider-list > li.slider-list-item:not(.is-visible) {
+		transition: visibility $slider-transition;
+		visibility: hidden;
+	}
+
+	&.has-no-next-item > ul.slider-actions > li > button.slider-actions-next {
+		pointer-events: none;
+	}
+
+	&.has-no-prev-item > ul.slider-actions > li > button.slider-actions-prev {
+		pointer-events: none;
+	}
+
+	&.is-rewinding {
+
+		> div.slider-viewport > ul.slider-list {
+			transition: transform $slider-rewind-transition;
+		}
+
+		> ul.slider-actions > li > button.slider-actions-prev, > ul.slider-actions > li > button.slider-actions-next {
+			pointer-events: none;
+		}
+	}
+
+	&.is-dragging {
+
+		> div.slider-viewport > ul.slider-list {
+			transition: transform 0ms;
+		}
+
+		> div.slider-viewport > ul.slider-list > li.slider-list-item:not(.is-visible) {
+			visibility: visible;
+		}
+	}
+
+	&.has-mouse-drag {
+
+		> div.slider-viewport {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	}
+}
+
+/* Slider component extensions */
+div.slider {
+}
