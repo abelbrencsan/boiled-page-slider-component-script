@@ -105,7 +105,7 @@ Place the following code inside `assets/js/app.js` to initialize element with `s
 ```js
 // Initialize sample slider
 var sampleSliderElem = document.getElementById('sample-slider');
-var sampleSlider = new Slider({
+app.sampleSlider = new Slider({
   element: sampleSliderElem,
   viewport: sampleSliderElem.querySelector('[data-slider-viewport]'),
   list: sampleSliderElem.querySelector('[data-slider-list]'),
@@ -113,7 +113,7 @@ var sampleSlider = new Slider({
   prevTrigger: sampleSliderElem.querySelector('[data-slider-prev]'),
   nextTrigger: sampleSliderElem.querySelector('[data-slider-next]')
 });
-sampleSlider.init();
+app.sampleSlider.init();
 ```
 
 Place the following code inside the `onBreakpointChange` function in `assets/js/app.js` to update active and visible slider items on breakpoint changes.
