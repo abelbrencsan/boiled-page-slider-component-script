@@ -83,11 +83,11 @@ The following example shows a slider
       </li>
     </ul>
   </div>
-  <ul class="slider-actions">
-    <li>
+  <ul class="slider-actions grid grid--gutter grid--gutter--half grid--uniform">
+    <li class="grid-col">
       <button type="button" class="slider-actions-prev button" aria-controls="sample-slider" data-slider-prev>Prev</button>
     </li>
-    <li>
+    <li class="grid-col">
       <button type="button" class="slider-actions-next button" aria-controls="sample-slider" data-slider-next>Next</button>
     </li>
   </ul>

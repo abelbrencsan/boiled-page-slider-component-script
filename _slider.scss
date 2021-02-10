@@ -30,15 +30,7 @@ div.slider {
 	}
 
 	> ul.slider-actions {
-		display: flex;
 		justify-content: center;
-		list-style: none;
-		margin-left: ($box-padding * -0.5);
-		padding-left: 0;
-
-		> li {
-			padding-left: ($box-padding * 0.5);
-		}
 	}
 
 	&.is-sliding > div.slider-viewport > ul.slider-list {
