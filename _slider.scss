@@ -12,12 +12,12 @@ div.slider {
 	> div.slider-viewport {
 		overflow: hidden;
 
-		> ul.slider-list {
+		> ul.slider-list.grid {
 			flex-wrap: nowrap;
 			margin-bottom: $element-margin;
 			position: relative;
 
-			> li.slider-list-item {
+			> li.slider-list-item.grid-col {
 				flex-shrink: 0;
 
 				> :last-child,
@@ -33,11 +33,11 @@ div.slider {
 		justify-content: center;
 	}
 
-	&.is-sliding > div.slider-viewport > ul.slider-list {
+	&.is-sliding > div.slider-viewport > ul.slider-list.grid {
 		transition: transform $slider-transition;
 	}
 
-	&:not(.is-sliding) > div.slider-viewport > ul.slider-list > li.slider-list-item:not(.is-visible) {
+	&:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.slider-list-item.grid-col:not(.is-visible) {
 		transition: visibility $slider-transition;
 		visibility: hidden;
 	}
@@ -52,7 +52,7 @@ div.slider {
 
 	&.is-rewinding {
 
-		> div.slider-viewport > ul.slider-list {
+		> div.slider-viewport > ul.slider-list.grid {
 			transition: transform $slider-rewind-transition;
 		}
 
@@ -63,11 +63,11 @@ div.slider {
 
 	&.is-dragging {
 
-		> div.slider-viewport > ul.slider-list {
+		> div.slider-viewport > ul.slider-list.grid {
 			transition: transform 0ms;
 		}
 
-		> div.slider-viewport > ul.slider-list > li.slider-list-item:not(.is-visible) {
+		> div.slider-viewport > ul.slider-list.grid > li.slider-list-item.grid-col:not(.is-visible) {
 			visibility: visible;
 		}
 	}
