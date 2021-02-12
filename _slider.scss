@@ -42,11 +42,11 @@ div.slider {
 		visibility: hidden;
 	}
 
-	&.has-no-next-item > ul.slider-actions.grid > li > button.slider-actions-next {
+	&.has-no-next-item > ul.slider-actions.grid > li.grid-col > button.slider-actions-next {
 		pointer-events: none;
 	}
 
-	&.has-no-prev-item > ul.slider-actions.grid > li > button.slider-actions-prev {
+	&.has-no-prev-item > ul.slider-actions.grid > li.grid-col > button.slider-actions-prev {
 		pointer-events: none;
 	}
 
@@ -56,7 +56,7 @@ div.slider {
 			transition: transform $slider-rewind-transition;
 		}
 
-		> ul.slider-actions.grid > li > button.slider-actions-prev, > ul.slider-actions.grid > li > button.slider-actions-next {
+		> ul.slider-actions.grid > li.grid-col > button.slider-actions-prev, > ul.slider-actions.grid > li.grid-col > button.slider-actions-next {
 			pointer-events: none;
 		}
 	}
