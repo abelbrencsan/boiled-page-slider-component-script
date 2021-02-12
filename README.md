@@ -18,9 +18,9 @@ Class name | Description | Example
 ---------- | ----------- | -------
 `slider` | Applies a slider. | `<div class="slider"></div>`
 `slider-viewport` | Applies a viewport inside slider. | `<div class="slider-viewport"></div>`
-`slider-list` | Applies a slider list inside viewport. Use grid component to set width of children. | `<ul class="slider-list"></ul>`
-`slider-list-item` | Applies an item inside slider list. | `<li class="slider-list-item"></li>`
-`slider-actions` | Applies a list of actions inside slider. | `<ul class="slider-actions"></ul>`
+`slider-list` | Applies a slider list inside viewport. Use grid component to set width of children. | `<ul class="slider-list grid"></ul>`
+`slider-list-item` | Applies an item inside slider list. | `<li class="slider-list-item grid-col"></li>`
+`slider-actions` | Applies a list of actions inside slider. | `<ul class="slider-actions grid"></ul>`
 
 #### Examples
 
