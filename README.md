@@ -19,8 +19,7 @@ Class name | Description | Example
 `slider` | Applies a slider. | `<div class="slider"></div>`
 `slider-viewport` | Applies a viewport inside slider. | `<div class="slider-viewport"></div>`
 `slider-list` | Applies a slider list inside viewport. Use grid component to set width of children. | `<ul class="slider-list grid"></ul>`
-`slider-list-item` | Applies an item inside slider list. | `<li class="slider-list-item grid-col"></li>`
-`slider-actions grid` | Applies a list of actions inside slider. | `<ul class="slider-actions grid"></ul>`
+`slider-action-list grid` | Applies a list of actions inside slider. | `<ul class="slider-action-list grid"></ul>`
 
 #### Examples
 
@@ -33,7 +32,7 @@ The following example shows a slider
   <p id="sample-slider-description" class="is-visually-hidden">Sample slider description</p>
   <div class="slider-viewport" data-slider-viewport>
     <ul class="slider-list grid grid--gutter" data-slider-list>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 1</a>
@@ -41,7 +40,7 @@ The following example shows a slider
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit leo at tempor iaculis. Curabitur fringilla non enim in malesuada. Proin ipsum nisl, scelerisque pharetra lectus at, ultrices mollis sem.</p>
         </div>
       </li>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 2</a>
@@ -49,7 +48,7 @@ The following example shows a slider
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit leo at tempor iaculis. Curabitur fringilla non enim in malesuada. Proin ipsum nisl, scelerisque pharetra lectus at, ultrices mollis sem.</p>
         </div>
       </li>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 3</a>
@@ -57,7 +56,7 @@ The following example shows a slider
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit leo at tempor iaculis. Curabitur fringilla non enim in malesuada. Proin ipsum nisl, scelerisque pharetra lectus at, ultrices mollis sem.</p>
         </div>
       </li>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 4</a>
@@ -65,7 +64,7 @@ The following example shows a slider
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit leo at tempor iaculis. Curabitur fringilla non enim in malesuada. Proin ipsum nisl, scelerisque pharetra lectus at, ultrices mollis sem.</p>
         </div>
       </li>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 5</a>
@@ -73,7 +72,7 @@ The following example shows a slider
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit leo at tempor iaculis. Curabitur fringilla non enim in malesuada. Proin ipsum nisl, scelerisque pharetra lectus at, ultrices mollis sem.</p>
         </div>
       </li>
-      <li class="slider-list-item grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
+      <li class="grid-col grid-col--1of3 grid-col--small--1of2 grid-col--xsmall--full" data-slider-list-item>
         <div class="box">
           <h3 class="h5">
             <a href="#">Sample slider list item 6</a>
@@ -83,12 +82,12 @@ The following example shows a slider
       </li>
     </ul>
   </div>
-  <ul class="slider-actions grid grid--gutter grid--gutter--half grid--uniform">
+  <ul class="slider-action-list grid grid--gutter grid--gutter--half grid--uniform">
     <li class="grid-col">
-      <button type="button" class="slider-actions-prev button" aria-controls="sample-slider" data-slider-prev>Prev</button>
+      <button type="button" class="slider-action-prev button" aria-controls="sample-slider" data-slider-prev>Prev</button>
     </li>
     <li class="grid-col">
-      <button type="button" class="slider-actions-next button" aria-controls="sample-slider" data-slider-next>Next</button>
+      <button type="button" class="slider-action-next button" aria-controls="sample-slider" data-slider-next>Next</button>
     </li>
   </ul>
 </div>
@@ -132,7 +131,7 @@ sampleSlider.recalc();
 div.slider {
 
   // Slider dots
-  > ul.slider-dots {
+  > ul.slider-dot-list {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -269,12 +268,3 @@ index | Number | Yes | Index of item where to slide.
 ##### Destroy slider
 
 `destroy()` - Destroy slider. It removes events and classes relevant to slider.
-
-##### Check slider is initialized or not
-
-`getIsInitialized()` - Check slider is initialized or not. It returns `true` when it is already initialized, `false` if not.
-
-##### Get active item's index
-
-`getActiveIndex()` - Get active item's index.
-

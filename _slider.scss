@@ -17,7 +17,7 @@ div.slider {
 			margin-bottom: $element-margin;
 			position: relative;
 
-			> li.slider-list-item.grid-col {
+			> li.grid-col {
 				flex-shrink: 0;
 
 				> :last-child,
@@ -29,7 +29,7 @@ div.slider {
 		}
 	}
 
-	> ul.slider-actions.grid {
+	> ul.slider-action-list.grid {
 		justify-content: center;
 	}
 
@@ -37,16 +37,16 @@ div.slider {
 		transition: transform $slider-transition;
 	}
 
-	&:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.slider-list-item.grid-col:not(.is-visible) {
+	&:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
 		transition: visibility $slider-transition;
 		visibility: hidden;
 	}
 
-	&.has-no-next-item > ul.slider-actions.grid > li.grid-col > button.slider-actions-next {
+	&.has-no-next-item > ul.slider-action-list.grid > li.grid-col > button.slider-action-next {
 		pointer-events: none;
 	}
 
-	&.has-no-prev-item > ul.slider-actions.grid > li.grid-col > button.slider-actions-prev {
+	&.has-no-prev-item > ul.slider-action-list.grid > li.grid-col > button.slider-action-prev {
 		pointer-events: none;
 	}
 
@@ -56,7 +56,7 @@ div.slider {
 			transition: transform $slider-rewind-transition;
 		}
 
-		> ul.slider-actions.grid > li.grid-col > button.slider-actions-prev, > ul.slider-actions.grid > li.grid-col > button.slider-actions-next {
+		> ul.slider-action-list.grid > li.grid-col > button.slider-action-prev, > ul.slider-action-list.grid > li.grid-col > button.slider-action-next {
 			pointer-events: none;
 		}
 	}
@@ -67,7 +67,7 @@ div.slider {
 			transition: transform 0ms;
 		}
 
-		> div.slider-viewport > ul.slider-list.grid > li.slider-list-item.grid-col:not(.is-visible) {
+		> div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
 			visibility: visible;
 		}
 	}

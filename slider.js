@@ -572,20 +572,6 @@ Slider.prototype = function () {
 				this.items[i].classList.remove(this.isVisibleClass);
 			}
 			if (this.destroyCallback) this.destroyCallback.call(this);
-		},
-
-		/**
-		 * Get value of "isTriggerInitialized" to be able to check slider is initialized or not. (public)
-		 */
-		getIsInitialized: function() {
-			return this.isInitialized;
-		},
-
-		/**
-		 * Get value of "activeIndex" to be able to get current active index. (public)
-		 */
-		getActiveIndex: function() {
-			return this.activeIndex;
 		}
 	};
 
@@ -596,9 +582,7 @@ Slider.prototype = function () {
 		slideTo: slider.slideTo,
 		update: slider.update,
 		recalc: slider.recalc,
-		destroy: slider.destroy,
-		getIsInitialized: slider.getIsInitialized,
-		getActiveIndex: slider.getActiveIndex
+		destroy: slider.destroy
 	};
 
 }();
