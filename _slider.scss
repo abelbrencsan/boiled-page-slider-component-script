@@ -29,10 +29,6 @@ div.slider {
 		}
 	}
 
-	> ul.slider-action-list.grid {
-		justify-content: center;
-	}
-
 	&.is-sliding > div.slider-viewport > ul.slider-list.grid {
 		transition: transform $slider-transition;
 	}
@@ -42,11 +38,11 @@ div.slider {
 		visibility: hidden;
 	}
 
-	&.has-no-next-item > ul.slider-action-list.grid > li.grid-col > button.slider-action-next {
+	&.has-no-next-item > ul.slider-action-list > li > button.slider-action-next {
 		pointer-events: none;
 	}
 
-	&.has-no-prev-item > ul.slider-action-list.grid > li.grid-col > button.slider-action-prev {
+	&.has-no-prev-item > ul.slider-action-list > li > button.slider-action-prev {
 		pointer-events: none;
 	}
 
@@ -56,7 +52,7 @@ div.slider {
 			transition: transform $slider-rewind-transition;
 		}
 
-		> ul.slider-action-list.grid > li.grid-col > button.slider-action-prev, > ul.slider-action-list.grid > li.grid-col > button.slider-action-next {
+		> ul.slider-action-list > li > button.slider-action-prev, > ul.slider-action-list > li > button.slider-action-next {
 			pointer-events: none;
 		}
 	}

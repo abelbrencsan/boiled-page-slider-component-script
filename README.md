@@ -19,7 +19,7 @@ Class name | Description | Example
 `slider` | Applies a slider. | `<div class="slider"></div>`
 `slider-viewport` | Applies a viewport inside slider. | `<div class="slider-viewport"></div>`
 `slider-list` | Applies a slider list inside viewport. Grid component is used to set width of slider list items. | `<ul class="slider-list grid"></ul>`
-`slider-action-list grid` | Applies a list of actions inside slider. Grid component is used for alignment. | `<ul class="slider-action-list grid"></ul>`
+`slider-action-list` | Applies a list of actions inside slider. Grid component can be used optionally for alignment. | `<ul class="slider-action-list"></ul>`
 
 #### Examples
 
@@ -82,7 +82,7 @@ The following example shows a slider
       </li>
     </ul>
   </div>
-  <ul class="slider-action-list grid grid--gutter grid--gutter--half grid--uniform">
+  <ul class="slider-action-list grid grid--gutter grid--gutter--half grid--uniform grid--center">
     <li class="grid-col">
       <button type="button" class="slider-action-prev button" aria-controls="sample-slider" data-slider-prev>Prev</button>
     </li>
