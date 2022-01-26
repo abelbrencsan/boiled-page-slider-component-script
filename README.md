@@ -228,6 +228,7 @@ Option| Type | Default | Required | Description
 `isSlidingFinishedClass` | String | 'is-sliding-finished' | No | Class added to slider after sliding is finished.
 `isActiveClass` | String | 'is-active' | No | Class added to slider item when it is active.
 `isVisibleClass` | String | 'is-visible' | No | Class added to each visible slider item.
+`isLoadedClass` | String | 'is-loaded' | No | Class added to slider after initialization.
 
 Available options for a slide to trigger object:
 

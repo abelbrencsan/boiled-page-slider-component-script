@@ -1,5 +1,5 @@
 /**
- * Slider - v1.1.0
+ * Slider - v1.1.1
  * Copyright 2021 Abel Brencsan
  * Released under the MIT License
  */
@@ -55,7 +55,8 @@ var Slider = function (options) {
 		isSlidingClass: 'is-sliding',
 		isSlidingFinishedClass: 'is-sliding-finished',
 		isTouchDraggingClass: 'is-touch-dragging',
-		isVisibleClass: 'is-visible'
+		isVisibleClass: 'is-visible',
+		isLoadedClass: 'is-loaded'
 	};
 
 	// Extend slider instance options with defaults
@@ -153,6 +154,7 @@ Slider.prototype = function () {
 				}
 			}
 			slider.update.call(this);
+			this.element.classList.add(this.isLoadedClass);
 			this.isInitialized = true;
 			if (this.initCallback) this.initCallback.call(this);
 		},
@@ -567,6 +569,7 @@ Slider.prototype = function () {
 			this.element.classList.remove(this.isSlidingFinishedClass);
 			this.element.classList.remove(this.isRewindingClass);
 			this.element.classList.remove(this.isDraggingClass);
+			this.element.classList.remove(this.isLoadedClass);
 			for (var i = 0; i < this.itemsCount; i++) {
 				this.items[i].classList.remove(this.isActiveClass);
 				this.items[i].classList.remove(this.isVisibleClass);

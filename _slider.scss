@@ -33,7 +33,7 @@ div.slider {
 		transition: transform $slider-transition;
 	}
 
-	&:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
+	&.is-loaded:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
 		transition: visibility $slider-transition;
 		visibility: hidden;
 	}
