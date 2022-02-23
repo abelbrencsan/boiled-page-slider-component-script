@@ -33,11 +33,21 @@ div.slider {
 		transition: transform $slider-transition;
 	}
 
-	&.is-loaded:not(.is-sliding) > div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
-		transition: visibility $slider-transition;
-		visibility: hidden;
-	}
+	&.is-loaded:not(.is-sliding) {
 
+		> div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
+			transition: visibility $slider-transition;
+			visibility: hidden;
+		}
+
+		&.is-dragging {
+			
+			> div.slider-viewport > ul.slider-list.grid > li.grid-col:not(.is-visible) {
+				visibility: visible;
+			}
+		}
+	}
+	
 	&.has-no-next-item > ul.slider-action-list > li > button.slider-action-next {
 		pointer-events: none;
 	}
