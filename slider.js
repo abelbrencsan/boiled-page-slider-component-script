@@ -408,7 +408,7 @@ Slider.prototype = function () {
 					}
 					if (this.slideToTriggers) {
 						for (var i = 0; i < this.slideToTriggers.length; i++) {
-							if (event.target == this.slideToTriggers[i].trigger) {
+							if (event.target == this.slideToTriggers[i].trigger && this.slideToTriggers[i].index != this.activeIndex) {
 								slider.slideTo.call(this, this.slideToTriggers[i].index);
 							}
 						}
