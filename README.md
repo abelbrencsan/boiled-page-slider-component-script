@@ -229,6 +229,7 @@ Option| Type | Default | Required | Description
 `isActiveClass` | String | 'is-active' | No | Class added to slider item when it is active.
 `isVisibleClass` | String | 'is-visible' | No | Class added to each visible slider item.
 `isLoadedClass` | String | 'is-loaded' | No | Class added to slider after initialization.
+`hasNoOverflowClass` | String | 'has-no-overflow' | No | Class added to slider when all items are visible inside the viewport.
 
 Available options for a slide to trigger object:
 
